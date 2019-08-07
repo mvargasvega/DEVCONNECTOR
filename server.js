@@ -5,6 +5,12 @@ const app = express();
 
 //connect database
 connectDB();
+
+// Init Middleware
+app.use(express.json({ extended: false}));
+
+
+
 // call back
 app.get('/', (req,res) => res.send('API Running'));
 //This will look for a port
